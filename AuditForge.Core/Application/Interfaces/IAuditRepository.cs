@@ -1,4 +1,5 @@
-﻿using AuditForge.Core.Domain.Entities;
+﻿using AuditForge.Application.Interfaces;
+using AuditForge.Core.Domain.Entities;
 
 namespace AuditForge.Core.Application.Interfaces
 {
@@ -11,6 +12,6 @@ namespace AuditForge.Core.Application.Interfaces
         /// Persists the given audit entry.
         /// </summary>
         /// <param name="entry">The audit entry to persist.</param>
-        Task SaveAsync(AuditEntry entry, CancellationToken cancellationToken = default);
+        Task SaveAsync(IAuditEntry entry, CancellationToken cancellationToken = default);
     }
 }

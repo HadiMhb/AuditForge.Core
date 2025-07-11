@@ -1,9 +1,11 @@
-﻿namespace AuditForge.Core.Domain.Entities
+﻿using AuditForge.Application.Interfaces;
+
+namespace AuditForge.Core.Domain.Entities
 {
     /// <summary>
     /// Represents a change made to a single property of an entity.
     /// </summary>
-    public class PropertyChange
+    public class PropertyChange : IPropertyChange
     {
         /// <summary>
         /// The name of the property that changed.

@@ -1,12 +1,18 @@
-﻿using AuditForge.Core.Domain.Enums;
+﻿using AuditForge.Application.Interfaces;
+using AuditForge.Core.Domain.Enums;
 
 namespace AuditForge.Core.Domain.Entities
 {
     /// <summary>
     /// Represents a tracked audit entry for a specific entity operation.
     /// </summary>
-    public class AuditEntry
+    public class AuditEntry: IAuditEntry
     {
+        /// <summary>
+        /// The CLR type of the entity being audited.
+        /// </summary>
+        public Type? EntityType { get; }
+
         /// <summary>
         /// The name of the entity that was changed (e.g., "User", "Invoice").
         /// </summary>
@@ -35,6 +41,15 @@ namespace AuditForge.Core.Domain.Entities
         /// <summary>
         /// A list of individual property changes made in this operation.
         /// </summary>
-        public List<PropertyChange> Changes { get; set; } = new();
+        public List<IPropertyChange> Changes { get; set; } = new();
+
+        /// <summary>
+        /// Constructor initializes EntityType from the provided entity instance.
+        /// </summary>
+        /// <param name="entity">The entity instance being audited.</param>
+        public AuditEntry(object entity)
+        {
+            EntityType = entity.GetType();
+        }
     }
 }

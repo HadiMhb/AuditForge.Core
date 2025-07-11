@@ -16,11 +16,6 @@ public class AuditOptions
     public bool EnableLogging { get; set; } = false;
 
     /// <summary>
-    /// If true, sensitive properties will be masked.
-    /// </summary>
-    public bool MaskSensitiveData { get; set; } = true;
-
-    /// <summary>
     /// Optional application or service name to record in audit logs.
     /// </summary>
     public string? Source { get; set; }

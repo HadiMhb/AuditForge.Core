@@ -16,11 +16,6 @@ public class EntityAuditOptions
     public List<string> IgnoredProperties { get; set; } = new();
 
     /// <summary>
-    /// List of property names to mask in audit logs.
-    /// </summary>
-    public List<string> SensitiveProperties { get; set; } = new();
-
-    /// <summary>
     /// If true, unchanged properties will be tracked as well.
     /// </summary>
     public bool TrackUnchangedProperties { get; set; } = false;
