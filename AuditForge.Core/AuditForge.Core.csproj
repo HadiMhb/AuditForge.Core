@@ -10,8 +10,6 @@
     <Folder Include="Application\Interfaces\" />
     <Folder Include="Application\Services\" />
     <Folder Include="Configuration\" />
-    <Folder Include="Domain\Entities\" />
-    <Folder Include="Domain\Enums\" />
   </ItemGroup>
 
 </Project>
