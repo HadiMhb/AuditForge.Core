@@ -3,7 +3,8 @@ name: Publish NuGet Package
 on:
   push:
     tags:
-      - 'v*'  # فقط زمانی اجرا شود که تگی با پیشوند v زده شود (مثل v1.0.0)
+      - 'v*'
+  workflow_dispatch:
 
 jobs:
   publish:
