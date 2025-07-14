@@ -4,13 +4,15 @@
 		<TargetFramework>net8.0</TargetFramework>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
-		<Version>1.0.0-alpha.1</Version>
-		<Authors>Hadi</Authors>
-		<Company></Company>
-		<PackageId>AuditForge</PackageId>
-		<Description>Lightweight auditing library for EF Core entities</Description>
+		<Version>1.0.1</Version>
+		<PackageId>AuditForge.Core</PackageId>
+		<Authors>Hadi Mohebi</Authors>
+		<Company>AuditForge</Company>
+		<Description>Lightweight audit trail library for EF Core - tracks inserts, updates, and deletes.</Description>
+		<PackageProjectUrl>https://github.com/HadiMhb/AuditForge.Core</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/HadiMhb/AuditForge.Core</RepositoryUrl>
-		<PackageTags>audit efcore logging</PackageTags>
+		<RepositoryType>git</RepositoryType>
+		<PackageTags>Audit Logging Tracking</PackageTags>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 	</PropertyGroup>
 
